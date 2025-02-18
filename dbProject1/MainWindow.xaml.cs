@@ -30,6 +30,7 @@ namespace dbProject1
             bool? dialog = win.ShowDialog();
             if(dialog == true)
             {
+                lw_Requests.Items.Clear();
                 ApplicationContext ac = new ApplicationContext();
                 List<Request> newList = new List<Request>();
                 newList = ac.Requests.ToList();
@@ -48,6 +49,7 @@ namespace dbProject1
             bool? dialog = win.ShowDialog();
             if (dialog == true)
             {
+                lw_Requests.Items.Clear();
                 ApplicationContext ac = new ApplicationContext();
                 List<Request> newList = new List<Request>();
                 newList = ac.Requests.ToList();

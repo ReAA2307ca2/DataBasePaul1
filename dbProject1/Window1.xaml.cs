@@ -41,6 +41,19 @@ namespace dbProject1
             }
             cb_addResp.SelectedIndex = 0;
             //tb_ID.Text = new Random().Next().ToString();
+            if(id != null)
+            {
+                ApplicationContext ac = new ApplicationContext();
+                var item = ac.Requests.FirstOrDefault(q => q.ID == id);
+                tb_date.Text = item.creationDate;
+                cb_type.SelectedItem = item.type;
+                tb_mod.Text = item.model;
+                tb_desc.Text = item.description;
+                tb_name.Text = item.name;
+                tb_telephone.Text = item.telephoneNumber;
+                cb_status.SelectedItem = item.status;
+                cb_addResp.Text = item.responsiveMan;
+            }
         }
 
         private void bt_save_Click(object sender, RoutedEventArgs e)
@@ -72,7 +85,7 @@ namespace dbProject1
                     item.type = (DeviceType)cb_type.SelectedItem;
                     item.model = tb_mod.Text;
                     item.description = tb_desc.Text;
-                    item.name = tb_desc.Name;
+                    item.name = tb_desc.Text;
                     item.telephoneNumber = tb_telephone.Text;
                     item.status = (RequestStatus)cb_status.SelectedItem;
                     item.responsiveMan = cb_addResp.Text;
