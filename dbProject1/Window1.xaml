@@ -1,0 +1,63 @@
+﻿<Window x:Class="dbProject1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dbProject1"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2">
+        </StackPanel>
+            <StackPanel Grid.Column="3" Grid.RowSpan="4" Grid.ColumnSpan="2" Margin="5">
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="ID"/>
+                    <TextBox Name="tb_ID" Width="250" IsEnabled="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Date"/>
+                    <TextBox Name="tb_date" Width="150" IsEnabled="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Type"/>
+                    <ComboBox Name="cb_type"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Model"/>
+                    <TextBox Name="tb_mod" Width="150" IsEnabled="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Decription"/>
+                    <TextBox Name="tb_desc" Width="250" IsEnabled="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Name"/>
+                    <TextBox Name="tb_name" Width="150" IsEnabled="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Telephone Number"/>
+                    <TextBox Name="tb_telephone" Width="150" IsEnabled="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 5">
+                    <TextBlock Text="Status"/>
+                    <ComboBox Name="cb_status"/>
+                </StackPanel>
+            </StackPanel>
+            <Button Content="Save" Name="bt_save" Grid.Row="4" Grid.Column="3" Margin="30 0 30 50" Click="bt_save_Click"/>
+            <ComboBox Name="cb_addResp" Grid.Row="4" Grid.Column="4" Margin="20 0 20 50"/>
+        </Grid>
+</Window>
